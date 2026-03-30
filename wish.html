@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Birthday Wish</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="memories.html">Memories</a>
+<a href="cake.html">Cake</a>
+<a href="wish.html">Wish</a>
+</nav>
+
+<div class="hearts">
+<div class="heart" style="top:10%; left:15%; color:#ff4d6d;">❤</div>
+<div class="heart" style="top:30%; left:70%; color:#ff4d6d;">❤</div>
+<div class="heart" style="top:60%; left:20%; color:#ff758f;">❤</div>
+<div class="heart" style="top:75%; left:80%; color:#ff4d6d;">❤</div>
+<div class="heart" style="top:45%; left:50%; color:#ff758f;">❤</div>
+</div>
+<h1>🎈 Tap the Balloons 🎈</h1>
+
+<div class="balloon-container">
+
+<img src="balloon.jpg" class="balloons" onclick="showWish()">
+
+<h2 id="wish-msg"></h2>
+
+</div>
+
+<script>
+function showWish(){
+document.getElementById("wish-msg").innerHTML =
+"🎉 Happy Birthday! Thank you for being the best senior!";
+}
+</script>
+
+</body>
+</html>
