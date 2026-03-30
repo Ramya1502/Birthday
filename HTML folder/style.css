@@ -1,0 +1,261 @@
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background: linear-gradient(to right,#ff9a9e,#fad0c4);
+    text-align:center;
+}
+
+nav{
+    background:#333;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    margin:15px;
+    text-decoration:none;
+    font-size:18px;
+}
+
+nav a:hover{
+    color:yellow;
+}
+
+.container{
+    padding:50px;
+}
+
+h1{
+    color:#222;
+}
+
+img{
+    width:500px;
+    border-radius:10px;
+    margin:15px;
+}
+
+button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    background:#ff4081;
+    color:white;
+    border-radius:5px;
+}
+
+
+.hearts{
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    z-index:-1;
+}
+
+.heart{
+    position:absolute;
+    font-size:120px;   /* size of heart */
+    opacity:0.25;      /* make it light */
+}
+
+/* Gift section */
+
+.gift-container{
+    display:flex;
+    justify-content:center;
+    margin-top:60px;
+}
+
+/* Gift box */
+
+.gift-box{
+    position:relative;
+    width:260px;
+    height:260px;
+    cursor:pointer;
+}
+
+/* Box bottom */
+
+.box{
+    width:260px;
+    height:170px;
+    background:#ff4d6d;
+    position:absolute;
+    bottom:0;
+    border-radius:8px;
+}
+
+/* Box lid */
+
+.lid{
+    width:270px;
+    height:70px;
+    background:#ff758f;
+    position:absolute;
+    top:0;
+    left:-5px;
+    border-radius:8px;
+    transition:0.6s;
+}
+
+/* Ribbon */
+
+.ribbon-vertical{
+    position:absolute;
+    width:30px;
+    height:260px;
+    background:white;
+    left:115px;
+    z-index:2;
+}
+
+.ribbon-horizontal{
+    position:absolute;
+    width:260px;
+    height:30px;
+    background:white;
+    top:90px;
+    z-index:2;
+}
+
+/* Bouquet */
+
+.bouquet{
+    position:absolute;
+    font-size:120px;
+    top:-150px;
+    left:70px;
+    opacity:0;
+    transition:0.6s;
+}
+
+/* Open animation */
+
+.gift-box.open .lid{
+    transform:translateY(-120px) rotate(-15deg);
+}
+
+.gift-box.open .bouquet{
+    opacity:1;
+    transform:translateY(-20px);
+}
+
+/* Memories layout */
+
+.memory-gallery{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+max-width:1000px;
+margin:40px auto;
+}
+
+/* Memory card */
+
+.memory-card{
+position:relative;
+height:220px;
+overflow:hidden;
+border-radius:20px;
+cursor:pointer;
+}
+
+/* Image */
+
+.memory-card img{
+width:100%;
+height:100%;
+object-fit:cover;
+border-radius:20px;
+}
+
+/* Text overlay */
+
+.memory-text{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+background:rgba(0,0,0,0.6);
+color:white;
+text-align:center;
+padding:12px;
+font-size:18px;
+opacity:0;
+transition:0.3s;
+}
+
+/* Show text */
+
+.memory-card:hover .memory-text{
+opacity:1;
+}
+
+.cake-title{
+text-align:center;
+margin-top:40px;
+}
+
+.cake-area{
+text-align:center;
+margin-top:80px;
+}
+
+#cake{
+font-size:200px;
+cursor:pointer;
+}
+
+#knife{
+font-size:100px;
+display:none;
+}
+
+#cake-pieces{
+display:none;
+font-size:70px;
+margin-top:20px;
+}
+
+#confetti{
+display:none;
+font-size:50px;
+margin-top:20px;
+animation:fall 1s infinite alternate;
+}
+
+#birthday-msg{
+display:none;
+font-size:40px;
+color:#ff4081;
+margin-top:20px;
+}
+
+@keyframes fall{
+from{transform:translateY(0);}
+to{transform:translateY(20px);}
+}
+
+.balloon-container{
+text-align:center;
+margin-top:80px;
+}
+
+.balloons{
+width:350px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.balloons:hover{
+transform:scale(1.08);
+}
+
+#wish-msg{
+margin-top:30px;
+font-size:35px;
+color:#ff4081;
+}
